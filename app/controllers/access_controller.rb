@@ -1,7 +1,10 @@
 class AccessController < ApplicationController
+before_action :confirm_logged_in, only: [:home]
+before_action :prevent_login_signup, only: [:signup, :login]
+
 
 def index
-	
+
 end
 
 def signup
@@ -15,7 +18,7 @@ def signup
       flash[:success] = "You are now logged in!"
       redirect_to home_path
     else
-      render :signup
+      render signup 
     end
    end
 
@@ -54,8 +57,9 @@ def signup
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = "Logged out"
     redirect_to index_path
+    flash[:notice] = "Logged out"
+    
   end
 
   private

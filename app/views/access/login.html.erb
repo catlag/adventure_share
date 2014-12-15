@@ -1,17 +1,40 @@
-<h1>Login</h1>
 
-  <%= form_tag(login_path) do %>
-<p>
-  <%= label_tag(:username)%>
-  <%= text_field_tag(:username, params[:username], autofocus: true)%>
-</p>
-<p>
-  <%= label_tag(:password)%>
-  <%= password_field_tag(:password)%>
-</p>
-<p>
-  <%= submit_tag("Log in", class: "btn btn-primary") %>
-</p>
-<% end %>
 
-<%= link_to "Don't have an account? Sign up here", signup_path%>
+<div class="row">
+	<div class="twelve columns">
+		<div class="row">
+			<section class= 'two columns push-one' >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="top" gumby-pin="[data-target='icons']" >
+					<ul id="sidebar-nav">
+
+							<li class="active"><%= link_to "Logo", index_path%></li>  
+
+							<li class="active"><%= link_to "Home", home_path%></li>
+
+					</ul>
+				</nav>
+			</section>
+
+			 <div class="seven columns push-two">
+			    <h1>Login</h1>
+
+					  <%= form_tag(login_path) do %>
+					<ul class="field">
+					  <%= label_tag(:username)%>
+					  <%= text_field_tag(:username, params[:username], autofocus: true, class: "input")%>
+					</ul>
+					<ul class="field">
+					  <%= label_tag(:password)%>
+					  <%= password_field_tag(:password, nil, class: "input")%>
+					</ul>
+					<p>
+					  <%= submit_tag("Log in", class: "medium default btn") %>
+					</p>
+					<% end %>
+
+					<%= link_to "Don't have an account? Sign up here", signup_path%>
+
+			  </div>
+		</div>
+	</div>
+</div>

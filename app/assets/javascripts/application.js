@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require gumby.min
+//= require gumby.parallax
 //= require_tree .
 
 

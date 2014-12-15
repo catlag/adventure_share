@@ -1,3 +1,36 @@
-<%= link_to "Have an account already? Log in here", login_path %>
-<br>
-<%= link_to "Don't have an account? Sign up here", signup_path%>
+<%= stylesheet_link_tag 'index'%>
+
+<div class="row navbar" id="nav1">
+  <!-- Toggle for mobile navigation, targeting the <ul> -->
+  <div class="row">
+	  <h1 class="twelve columns logo">
+	    <%= link_to "Title", index_path, class: "text-center"%>
+	  </h1>
+	</div>
+</div>
+<!-- ------------------ -->
+<div class="row">
+	<div class="centered ten columns">
+		<% flash.each do |key, value| %>
+		  <% if key == "notice" %>
+		    <%= content_tag :div, value, class: "text-center secondary alert"%>
+		  <% elsif key == "alert" %>
+		    <%= content_tag :div, value, class: "text-center danger alert" %>
+		  <% else %>
+		    <%= content_tag :div, value, class: "text-center success alert" %>
+		  <% end %>
+		<% end %>
+	</div>
+</div>
+
+<!-- ------------------- -->
+
+<div class="row">
+	  <div class="six columns text-center">
+	    <%= link_to "Log In ", login_path, class: "medium default btn" %>
+		</div>
+		<div class="six colums text-center">
+			<%= link_to "Sign Up ", signup_path, class: "medium default btn"  %>
+		</div>
+  </div>
+</div>
