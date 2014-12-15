@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  root to: 'access#index', as: 'index'
 
-  root 'home#index'
+  get 'login', to: "access#login", as: 'login'
 
-  match '*path' => "raffler#index", :via => [:get, :post]
+  get 'signup', to: "access#signup", as: 'signup'
+
+  post 'login', to: "access#attempt_login"
+
+  post 'signup', to: "access#create"
+
+  get 'home', to: "access#home", as: 'home'
+
+  get 'logout', to: "access#logout"
+
+  match '*path' => "access#index", :via => [:get, :post]
 end
