@@ -20,7 +20,7 @@ a:hover{
 
 h1{
 	color: white;
-	font-size: 8em;
+	font-size: 4em;
 }
 
 .sideText a{
@@ -56,7 +56,7 @@ input.btn:hover, input.btn.default:hover, {
 	font-size: 30px;
 }
 
-.field .input{
+/*.field .input{
 	background: none;
 	height: 50px;
 	font-size: 2rem;
@@ -66,10 +66,14 @@ input.btn:hover, input.btn.default:hover, {
 form label{
 	font-size: 2rem;
 	color: white;
-}
+}*/
 
-.columns{
+/*.columns{
 	margin-left: 10%;
+}*/
+
+.row{
+	max-width: 90%;
 }
 
 

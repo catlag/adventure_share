@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
     presence: true,
     uniqueness: true
 
+  has_many :usertrips
+	has_many :trips, through: :usertrips
+
 end

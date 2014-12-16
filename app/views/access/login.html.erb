@@ -1,23 +1,31 @@
-
+<%= stylesheet_link_tag "access" %>
 
 <div class="row">
 	<div class="twelve columns">
 		<div class="row">
-			<section class= 'two columns push-one' >
+			<section class= 'sideNav two columns push-one' >
 				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="top" gumby-pin="[data-target='icons']" >
 					<ul id="sidebar-nav">
 
-							<li class="active"><%= link_to "Logo", index_path%></li>  
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
 
-							<li class="active"><%= link_to "Home", home_path%></li>
+							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
 
 					</ul>
 				</nav>
 			</section>
 
-			 <div class="seven columns push-two">
+			 <div class="six columns push-three text-centered">
 			    <h1>Login</h1>
-
+					<% flash.each do |key, value| %>
+					  <% if key == "notice" %>
+					    <%= content_tag :div, value, class: "text-center secondary alert"%>
+					  <% elsif key == "alert" %>
+					    <%= content_tag :div, value, class: "text-center danger alert" %>
+					  <% else %>
+					    <%= content_tag :div, value, class: "text-center success alert" %>
+					  <% end %>
+				<% end %>
 					  <%= form_tag(login_path) do %>
 					<ul class="field">
 					  <%= label_tag(:username)%>
@@ -28,11 +36,11 @@
 					  <%= password_field_tag(:password, nil, class: "input")%>
 					</ul>
 					<p>
-					  <%= submit_tag("Log in", class: "medium default btn") %>
+					  <%= submit_tag("Log in", class: "large default btn") %>
 					</p>
 					<% end %>
 
-					<%= link_to "Don't have an account? Sign up here", signup_path%>
+					<%= link_to "Don't have an account? Sign up here", signup_path, class: "link"%>
 
 			  </div>
 		</div>

@@ -10,10 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require modernizr-2.6.2.min
 //= require jquery
 //= require jquery_ujs
 //= require gumby.min
 //= require gumby.parallax
+//= require gumby.init
 //= require_tree .
 
-
+Gumby.init();

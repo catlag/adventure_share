@@ -1,28 +1,47 @@
-<div class="row navbar pretty"  gumby-fixed="top" id="nav1">
-  <!-- Toggle for mobile navigation, targeting the <ul> -->
-  <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
-  <h1 class="ten columns logo">
-    <%= link_to "Logo", index_path%>
-  </h1>
-  <ul class="two columns">
-    <li><%= link_to "Logout", logout_path %></li>
-</div>
-
-<!-- ---------------------- -->
-
+<%= stylesheet_link_tag "home" %>
 <div class="row">
-	<div class="centered ten columns">
-		<% flash.each do |key, value| %>
-		  <% if key == "notice" %>
-		    <%= content_tag :div, value, class: "text-center secondary alert"%>
-		  <% elsif key == "alert" %>
-		    <%= content_tag :div, value, class: "text-center danger alert" %>
-		  <% else %>
-		    <%= content_tag :div, value, class: "text-center success alert" %>
-		  <% end %>
-		<% end %>
+	<div class="twelve columns">
+		<div class="row">
+			<section class= 'sideNav two columns push-one' >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="top" gumby-pin="[data-target='icons']" >
+					<ul id="sidebar-nav">
+
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+
+							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+
+					</ul>
+				</nav>
+			</section>
+
+
+
+			<div class="eight columns">
+			<div class="text-center">
+				<h1>Home page</h1>
+			</div>
+				<% flash.each do |key, value| %>
+				  <% if key == "notice" %>
+				    <%= content_tag :div, value, class: "text-center secondary alert"%>
+				  <% elsif key == "alert" %>
+				    <%= content_tag :div, value, class: "text-center danger alert" %>
+				  <% else %>
+				    <%= content_tag :div, value, class: "text-center success alert" %>
+				  <% end %>
+				<% end %>
+				<div class="row">
+					<div class="twelve columns">
+						<p>
+							skldfasldkfasdfjskdlfjsdklfjadslkfjsdlkfjklsdfj
+							sdjflkasdfjlksdfjlksdjfksdjflkjsdlfkjlsdkfjlksdfjsd
+							dksfjlaksdjflkjsdflkjsdlkfjlksdjflksdjflkjdflkjdskfj
+							ksdljflksdjflkjasdklfjlsdkfjasdklfnowwhat...
+						</p>
+						</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-
-<!-- ----------------------- -->
