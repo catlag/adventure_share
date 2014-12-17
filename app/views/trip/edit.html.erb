@@ -1,0 +1,57 @@
+<%= stylesheet_link_tag "home" %>
+<div class="row">
+	<div class="twelve columns">
+		<div class="row">
+			<section class= 'sideNav two columns push-one' >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="60" gumby-top="60" >
+					<ul id="sidebar-nav">
+
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
+							<li class="active text-center sideText"><%= link_to "New Trip", trip_new_path%></li>
+							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+
+					</ul>
+				</nav>
+			</section>
+
+			<div class="seven columns pull-one">
+
+				<div class="row">
+					<div class="text-center">
+						<h1>Trip</h1>
+					</div>
+					<div class="seven columns">
+							<%= form_for(@trip, url: trip_edit_path) do |f|%>
+									<div class = "field">
+									  <%= f.label(:departure, "From") %>
+									  <%= f.text_field(:departure, autofocus: true, class: "input") %>
+									</div>
+
+									<div class="field">
+									  <%= f.label(:destination, "To") %>
+									  <%= f.text_field(:destination,  class: "input") %>
+									</div>
+									<div class="field">
+									  <%= f.label(:startDate, "Start Date") %>
+									  <%= f.text_field(:startDate,  class: "input") %>
+									</div>
+									<div class="field">
+									  <%= f.label(:endDate, "End Date") %>
+									  <%= f.text_field(:endDate,  class: "input") %>
+									</div>
+									<div class="field">
+									  <%= f.label(:seats, "Seats") %>
+									  <%= f.text_field(:seats,  class: "input") %>
+									</div>
+									<div class="field">
+
+									<%= f.submit("Edit a trip!", class: "large default btn") %>
+									<% end %>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

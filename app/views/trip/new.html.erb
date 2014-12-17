@@ -1,0 +1,57 @@
+<%= stylesheet_link_tag "access" %>
+<div class="row">
+	<div class="twelve columns">
+		<div class="row">
+			<section class= 'sideNav two columns push-one' >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="40" gumby-top="40" >
+					<ul id="sidebar-nav">
+
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+
+							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
+							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+
+					</ul>
+				</nav>
+			</section>
+
+			<div class="eight columns">
+			<div class="text-center">
+				<h1>New Trip</h1>
+			</div>
+				<div class="row">
+					<div class="twelve columns">
+						<%= form_tag("/trip/create", method: "post") do %>
+						<ul class="field">
+						  <%= label_tag(:departure, "Departure:") %>
+						  <%= text_field_tag(:departure, nil, autofocus: true, class: "input") %>
+						</ul>
+						<ul class="field">
+						  <%= label_tag(:destination, "Destination:") %>
+						  <%= text_field_tag(:destination, nil, class: "input") %>
+						</ul>
+						<ul class="field">
+						    <%= label_tag(:startDate, "Start Date:") %>
+						  <%= text_field_tag(:startDate, nil, class: "input") %>
+						</ul>
+						<ul class="field">
+						    <%= label_tag(:endDate, "End Date:") %>
+						  <%= text_field_tag(:endDate, nil, class: "input") %>
+						</ul>
+						<ul class="field">
+						  <%= label_tag(:seats, "Seats Available:") %>
+						  <%= text_field_tag(:seats, nil, class: "input") %>
+						</ul>
+						<p>
+							 <%= submit_tag("Save", class: "large default btn") %>
+						</p>
+						 <% end %>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

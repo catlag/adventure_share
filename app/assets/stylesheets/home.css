@@ -72,6 +72,8 @@ form label{
 	margin-left: 10%;
 }*/
 
+
+
 .row{
 	max-width: 90%;
 }
@@ -98,3 +100,7 @@ form label{
 .alert{
 	font-size: 1.5rem;
 }
+
+/*nav#sidebar-nav-holder{
+	width: 100%;
+}*/

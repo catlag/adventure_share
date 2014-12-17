@@ -5,6 +5,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :destination
       t.string :startDate
       t.string :endDate
+      t.integer :seats
 
       t.timestamps
     end

@@ -4,6 +4,7 @@ FactoryGirl.define do
 destination "MyString"
 startDate "MyString"
 endDate "MyString"
+seats 1
   end
 
 end

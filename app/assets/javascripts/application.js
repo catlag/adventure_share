@@ -18,4 +18,4 @@
 //= require gumby.init
 //= require_tree .
 
-Gumby.init();
+

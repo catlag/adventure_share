@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag "home" %>
+<div class="row">
+	<div class="twelve columns">
+		<div class="row">
+			<section class= 'sideNav two columns push-one' >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="60" gumby-top="60" >
+					<ul id="sidebar-nav">
+
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							<li class="active text-center sideText"><%= link_to "New Trip", trip_new_path%></li>
+							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+
+					</ul>
+				</nav>
+			</section>
+
+			<div class="seven columns pull-one">
+
+				<div class="row">
+					<div class="text-center">
+						<h1>Trips Page</h1>
+					</div>
+					<div class="seven columns">
+						
+								<% @trips.each do |trip| %>
+
+									<ul >
+										From: <%= trip.departure %>
+										<br>
+										To: <%= trip.destination %>
+										<br>
+										Start Date: <%= trip.startDate %>
+										<br>
+										End Date: <%= trip.endDate %>
+										<br>
+										Seats: <%= trip.seats %>
+										<br>
+										<%= link_to("Details", trip_show_path(trip.id)) %>
+								</ul>
+								<% end %>
+
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'access#index', as: 'index'
 
   get 'login', to: "access#login", as: 'login'
@@ -13,5 +14,22 @@ Rails.application.routes.draw do
 
   get 'logout', to: "access#logout"
 
-  match '*path' => "access#index", :via => [:get, :post]
+  # Trip routes 
+
+  get 'trip', to: "trip#index", as: 'trip'
+
+  get 'trip/:id/edit', to: "trip#edit", as: 'trip_edit'
+
+  get 'trip/new', to: "trip#new"
+
+  get 'trip/show/:id', to: "trip#show", as: 'trip_show'
+
+  post 'trip/create', to: "trip#create"
+
+  patch 'trip/:id/edit', to: "trip#update"
+
+  delete 'trip/destroy', to: "trip#destroy"
+
+  
+
 end

@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+
 gem 'pry-rails'
 gem 'angularjs-rails-resource', '~> 1.1.1'
 gem 'angular-gem'
@@ -37,6 +38,8 @@ gem 'instagram'
 gem 'pry-rails'
 
 gem 'gulp_rails', '~> 1.0'
+
+gem "mailboxer"
 
 # Use unicorn as the app server
 # gem 'unicorn'
