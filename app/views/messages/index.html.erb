@@ -3,36 +3,41 @@
 	<div class="twelve columns">
 		<div class="row">
 			<section class= 'sideNav two columns push-one' >
-				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="60" gumby-top="60" >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="40" gumby-top="40" >
 					<ul id="sidebar-nav">
 
 							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
-							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
 							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
 							<li class="active text-center sideText"><%= link_to "New Trip", trip_new_path%></li>
 							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+
 
 					</ul>
 				</nav>
 			</section>
 
-			<div class="seven columns pull-one">
 
+
+			<div class="eight columns">
+			<div class="text-center">
+				<h1>Messages</h1>
+			</div>
 				<div class="row">
-					<div class="text-center">
-						<h1>Trip</h1>
-					</div>
-					<div class="seven columns">
-					<h1>hello</h1>
-					
-							<p>
-								<% @trip.users.each do |user|%>
-										User: <%= user.username %>
-								<% end %>
-							</p>
+					<div class="twelve columns">
+						<% @user.mailbox.inbox.each do |msg| %>
+						<ul>
+							<h3><%= msg.subject %></h3>
+
+							<p>Date: <%= msg.created_at %></p>
+						</ul>
+						<%= link_to("View Conversation", :controller => :conversations, :action => :show, :id => msg.id) %>
+							
+						<% end %>
 						</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+

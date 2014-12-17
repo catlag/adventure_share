@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "home" %>
+<%= stylesheet_link_tag "access" %>
 <div class="row">
 	<div class="twelve columns">
 		<div class="row">
@@ -24,30 +24,31 @@
 					</div>
 					<div class="seven columns">
 							<%= form_for(@trip, url: trip_edit_path) do |f|%>
-									<div class = "field">
+									<ul class = "field">
 									  <%= f.label(:departure, "From") %>
 									  <%= f.text_field(:departure, autofocus: true, class: "input") %>
-									</div>
+									</ul>
 
-									<div class="field">
+									<ul class="field">
 									  <%= f.label(:destination, "To") %>
 									  <%= f.text_field(:destination,  class: "input") %>
-									</div>
-									<div class="field">
+									</ul>
+									<ul class="field">
 									  <%= f.label(:startDate, "Start Date") %>
 									  <%= f.text_field(:startDate,  class: "input") %>
-									</div>
-									<div class="field">
+									</ul>
+									<ul class="field">
 									  <%= f.label(:endDate, "End Date") %>
 									  <%= f.text_field(:endDate,  class: "input") %>
-									</div>
-									<div class="field">
+									</ul>
+									<ul class="field">
 									  <%= f.label(:seats, "Seats") %>
 									  <%= f.text_field(:seats,  class: "input") %>
-									</div>
-									<div class="field">
-
+									</ul>
+									
+									<p>
 									<%= f.submit("Edit a trip!", class: "large default btn") %>
+									</p>
 									<% end %>
 						</div>
 				</div>

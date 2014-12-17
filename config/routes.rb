@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   delete 'trip/destroy', to: "trip#destroy"
 
-  
+  resources :messages
+  resources :conversations
 
 end
