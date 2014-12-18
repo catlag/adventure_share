@@ -1,4 +1,4 @@
-show.html.erb<%= stylesheet_link_tag "access" %>
+<%= stylesheet_link_tag "inbox" %>
 <div class="row">
 	<div class="twelve columns">
 		<div class="row">
@@ -19,39 +19,48 @@ show.html.erb<%= stylesheet_link_tag "access" %>
 
 
 
-			<div class="eight columns">
-				<div class="text-center">
-					<h1></h1>
-				</div>
-				<div class="row">
-							<%= @sender.username %>
-							<% @receipts.each do |receipt| %>
-								<ul>
-									Subject: <%= receipt.message.subject %>
-									<br>
-									Date: <%= receipt.message.created_at %> 
-									<br>
-									Body: <%= receipt.message.body %>
-								</ul>
-								 <%end  %>
-					</div>	
-					<div class="row">
-						<%= form_for(@receipt, url: new_conversation_path) do |f|%>
-							<ul class="field">
-							  <%= f.label(:subject, "Subject") %>
-							  <%= f.text_field(:subject,  class: "input") %>
-							</ul>
-							<ul class="field">
-							  <%= f.label(:Body, "Body") %>
-							  <%= f.text_field(:Body,  class: "input") %>
-							</ul>
-							
-							<ul class="field">
-
-							<%= f.submit("Edit a trip!", class: "large default btn") %>
-							<% end %>
-							</ul>
+				<div class="eight columns">
+					<div class="text-center">
+						<h1></h1>
 					</div>
+					<div class="row convo">
+								<h2>Conversation with:  
+								<% @recipients.each do |person| %>
+										<%= person %>
+								<% end %>
+								</h2>
+								
+								<% @receipts.each do |receipt| %>
+									<ul>
+									<li class="convoBox">
+									<%= receipt.message.inspect %>
+										<h4>Subject: <%= receipt.message.subject %></h4>
+										<div>Date: <%= receipt.message.created_at %></div>
+										<div>Body: <%= receipt.message.body %></div>
+									</li>
+									</ul>
+								<% end %>
+						</div>	
+						<br>
+						<div class="row">
+						<h2>Reply</h2>
+								<%= form_tag("/conversations", method: "post") do %>
+								<%= hidden_field_tag 'id', @id %>
+								<%= hidden_field_tag 'msg_id', @msg_id%>
+								<ul class="field">
+								  <%= label_tag(:subject, "Subject:") %>
+								  <%= text_field_tag(:subject, nil, autofocus: false, class: "input") %>
+								</ul>
+								<ul class="field">
+								  <%= label_tag(:body, "Body:") %>
+								  <%= text_area_tag( :body, nil, size: "25x10", class: "textarea input") %>
+								</ul>
+								<p>
+									 <%= submit_tag("Save", class: "large default btn") %>
+								</p>
+							 <% end %>
+								</ul>
+						</div>
 					</div>
 				</div>
 			</div>

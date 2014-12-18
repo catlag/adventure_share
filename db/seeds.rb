@@ -19,31 +19,31 @@ trip1 = Trip.create(
       destination: "Kansas City",
       startDate: "12/20/2014",
       endDate: "12/23/2014",
-      seats: 3})
+      seats: 2})
 @person1.trips.push(trip1)
 
 trip2 = Trip.create(
-      {departure: "Los Angeles",
-      destination: "Kansas City",
-      startDate: "12/20/2014",
-      endDate: "12/23/2014",
-      seats: 3})
+      {departure: "Seattle",
+      destination: "Austin",
+      startDate: "12/31/2014",
+      endDate: "1/04/2014",
+      seats: 1})
 @person2.trips.push(trip2)
 
 trip3 = Trip.create(
-      {departure: "Los Angeles",
-      destination: "Kansas City",
+      {departure: "Chicago",
+      destination: "Las Vegas",
       startDate: "12/20/2014",
       endDate: "12/23/2014",
       seats: 3})
 @person3.trips.push(trip3)
 
 trip4 = Trip.create(
-      {departure: "Los Angeles",
-      destination: "Kansas City",
+      {departure: "Here",
+      destination: "There",
       startDate: "12/20/2014",
       endDate: "12/23/2014",
-      seats: 3})
+      seats: 4})
 @person4.trips.push(trip4)
 
 @body = "this is the body of the message"

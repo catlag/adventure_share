@@ -24,14 +24,21 @@
 			</div>
 				<div class="row">
 					<div class="twelve columns">
-						<% @user.mailbox.inbox.each do |msg| %>
+						<% @user.mailbox.conversations.each do |msg| %>
 						<ul>
+							<li class="convoBox">
 							<h3><%= msg.subject %></h3>
+							<%= msg.inspect %>
 
 							<p>Date: <%= msg.created_at %></p>
-						</ul>
+						
 						<%= link_to("View Conversation", :controller => :conversations, :action => :show, :id => msg.id) %>
-							
+						<br>
+						<%= link_to 'Delete Conversation', 
+						      { :controller => 'conversations', :action => :destroy, :id => msg.id }, 
+						      { :confirm => 'Are you sure?', :method => :delete} %>
+						</ul>
+							</li>
 						<% end %>
 						</div>
 				</div>

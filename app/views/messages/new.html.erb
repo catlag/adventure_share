@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag "inbox" %>
+<div class="row">
+	<div class="twelve columns">
+		<div class="row">
+			<section class= 'sideNav two columns push-one' >
+				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="40" gumby-top="40" >
+					<ul id="sidebar-nav">
+
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
+							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+
+					</ul>
+				</nav>
+			</section>
+
+			<div class="eight columns">
+			<div class="text-center">
+				<h1> Message <%= @name %></h1>
+			</div>
+				<div class="row">
+					<div class="twelve columns">
+						<%= form_tag("/messages", method: "post") do %>
+								<%= hidden_field_tag 'id', @id %>
+								<ul class="field">
+								  <%= label_tag(:subject, "Subject:") %>
+								  <%= text_field_tag(:subject, nil, autofocus: false, class: "input") %>
+								</ul>
+								<ul class="field">
+								  <%= label_tag(:body, "Body:") %>
+								  <%= text_area_tag( :body, nil, size: "25x10", class: "textarea input") %>
+								</ul>
+								<p>
+									 <%= submit_tag("Save", class: "large default btn") %>
+								</p>
+							 <% end %>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

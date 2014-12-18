@@ -5,7 +5,9 @@ html{
 body{
 	width: 100%;
 	height: 100%;
-	background-image: url(http://humanwritesstuff.files.wordpress.com/2012/03/valley-road-33.jpg);
+	background-image: url(http://i.imgur.com/13pSZK9.png);
+			  background-attachment: fixed;
+    background-position: center;
 
 }
 
@@ -30,22 +32,22 @@ h1{
 li {
 	padding-left: 15px;
 	padding-right: 15px;
-	background: rgba(255, 255, 255, 0.2);
-}
-
-li:hover{
 	background: rgba(0, 7, 7, 0.2);
 }
 
+li:hover{
+	background: rgba(0, 7, 7, 0.6);
+}
+
 .btn, .btn.default, {
-	background: none;
+	background: rgba(0, 7, 7, 0.2);
 	color: white;
 	padding-left: 0.25em !important;
 	padding-right: 0.25em !important;
 }
 
 input.btn:hover, input.btn.default:hover, {
-     background: rgba(255, 255, 255, 0.2);
+     background:rgba(0, 7, 7, 0.4);
 }
 
 .sideNav{
@@ -57,7 +59,8 @@ input.btn:hover, input.btn.default:hover, {
 }
 
 .field .input{
-	background: none;
+	color: white;
+	background:  rgba(0, 7, 7, 0.2);
 	height: 50px;
 	font-size: 2rem;
 	border: 2px solid white;

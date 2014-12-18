@@ -1,11 +1,14 @@
 html{
 	line-height: 4em;
+	
 }
 
 body{
 	width: 100%;
 	height: 100%;
-	background-image: url(http://humanwritesstuff.files.wordpress.com/2012/03/valley-road-33.jpg);
+	background-image: url(http://i.imgur.com/13pSZK9.png);
+	  background-attachment: fixed;
+    background-position: center;
 
 }
 
@@ -23,6 +26,10 @@ h1{
 	font-size: 4em;
 }
 
+h2, h3, h5{
+	color: white;
+}
+
 .sideText a{
 	color: white;;
 }
@@ -30,22 +37,22 @@ h1{
 li {
 	padding-left: 15px;
 	padding-right: 15px;
-	background: rgba(255, 255, 255, 0.2);
+	background:  rgba(0, 7, 7, 0.2);
 }
 
 li:hover{
-	background: rgba(0, 7, 7, 0.2);
+	background: rgba(0, 7, 7, 0.6);
 }
 
 .btn, .btn.default, {
-	background: none;
+	background: rgba(0, 7, 7, 0.2);
 	color: white;
 	padding-left: 0.25em !important;
 	padding-right: 0.25em !important;
 }
 
 input.btn:hover, input.btn.default:hover, {
-     background: rgba(255, 255, 255, 0.2);
+     background: rgba(0, 7, 7, 0.4);
 }
 
 .sideNav{
@@ -101,6 +108,12 @@ form label{
 	font-size: 1.5rem;
 }
 
-/*nav#sidebar-nav-holder{
-	width: 100%;
-}*/
+li.convoBox, li.convoBox:hover{
+
+	background: rgba(0, 7, 7, 0.2);
+}
+
+div.convo h2, li.convoBox, li.convoBox h4{
+	line-height: 2em;
+	color :white;
+}

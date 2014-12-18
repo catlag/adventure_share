@@ -34,28 +34,30 @@
 				<% end %>
 				<div class="row">
 					<div class="twelve columns">
-					<h2>Hello, <%= @user.username %></h2>
-					
-						<h5>Your trips:</h5>
-						<% @user.trips.each do |trip| %>
-						<ul >
-						From: <%= trip.departure %>
-						<br>
-						Destination: <%= trip.destination %>
-						<br>
-						Start Date: <%= trip.startDate %>
-						<br>
-						End Date: <%= trip.endDate %>
-						<br>
-						Seats: <%= trip.seats %>
-						<br>
-						</ul>
-						<%= link_to("Update", :controller => :trip, :action => :edit, :id => trip.id) %>
-						<%= link_to 'Delete', 
-			      { :controller => 'trip', :action => 'destroy', :id => trip.id }, 
-			      { :confirm => 'Are you sure?', :method => :delete} %>
-						<% end %>
-						</p>
+						<h3><%= @user.username %>'s trips:</h3>
+							<% @user.trips.each do |trip| %>
+							<ul >
+								<li class="convoBox">
+
+									From: <%= trip.departure %>
+									<br>
+									Destination: <%= trip.destination %>
+									<br>
+									Start Date: <%= trip.startDate %>
+									<br>
+									End Date: <%= trip.endDate %>
+									<br>
+									Sats: <%= trip.seats %>
+									<br>
+									<%= link_to("Update", :controller => :trip, :action => :edit, :id => trip.id) %>
+									<%= link_to 'Delete', 
+						      { :controller => 'trip', :action => 'destroy', :id => trip.id }, 
+						      { :confirm => 'Are you sure?', :method => :delete} %>
+				      	</li>
+							</ul>
+
+							<% end %>
+							</p>
 						</div>
 				</div>
 			</div>
