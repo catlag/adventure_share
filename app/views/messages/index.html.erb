@@ -6,7 +6,10 @@
 				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="40" gumby-top="40" >
 					<ul id="sidebar-nav">
 
-							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li> 
+							<a>
+								<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							</a> 
 							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
 							<li class="active text-center sideText"><%= link_to "New Trip", trip_new_path%></li>
 							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
@@ -28,7 +31,6 @@
 						<ul>
 							<li class="convoBox">
 							<h3><%= msg.subject %></h3>
-							<%= msg.inspect %>
 
 							<p>Date: <%= msg.created_at %></p>
 						

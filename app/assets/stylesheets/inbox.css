@@ -5,7 +5,7 @@ html{
 body{
 	width: 100%;
 	height: 100%;
-	background-image: url(http://i.imgur.com/13pSZK9.png);
+	background-image: url(http://i.imgur.com/UAQhwdD.jpg);
 		  background-attachment: fixed;
     background-position: center;
 
@@ -23,6 +23,10 @@ a:hover{
 h1{
 	color: white;
 	font-size: 8em;
+}
+
+h2{
+	color: white;
 }
 
 .sideText a{
@@ -50,7 +54,7 @@ div.convo h2, li.convoBox, li.convoBox h4{
 }
 
 .btn, .btn.default, {
-	background: rgba(0, 7, 7, 0.2);
+	background: rgba(0, 7, 7, 0.2) !important;
 	color: white;
 	padding-left: 0.25em !important;
 	padding-right: 0.25em !important;
@@ -107,4 +111,10 @@ form label{
 .alert{
 	font-size: 1.5rem;
 }
+
+li a { 
+    display: block; 
+    /* and you can use padding for additional space if needs, as a clickable area / or other styling */ 
+}
+
 

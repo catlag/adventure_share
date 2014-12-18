@@ -6,11 +6,19 @@
 				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="40" gumby-top="40" >
 					<ul id="sidebar-nav">
 
-							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+							<a>
+								<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>
+							</a>  
 
-							<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
-							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
-							<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+							<a>
+								<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							</a>
+							<a>	
+								<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
+							</a>
+							<a>
+								<li class="active text-center sideText"><%= link_to "Log Out", logout_path%></li>
+							</a>
 
 					</ul>
 				</nav>

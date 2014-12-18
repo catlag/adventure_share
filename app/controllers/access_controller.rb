@@ -5,12 +5,16 @@ before_action :prevent_login_signup, only: [:signup, :login]
 
 
 def index
+  @user = User.find_by_id(session[:user_id]) 
+  if @user
+    redirect_to home_path
+  end
 
 end
 
 def signup
     @user = User.new
-  end
+end
 
    def create
     @user = User.create(user_params)

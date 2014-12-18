@@ -6,7 +6,10 @@
 				<nav id="sidebar-nav-holder" class="vertical-nav fixed" gumby-fixed="40" gumby-top="40" >
 					<ul id="sidebar-nav">
 
-							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>  
+							<li class="active text-center sideText"><%= link_to "Logo", index_path%></li>
+							<a>
+								<li class="active text-center sideText"><%= link_to "Home", home_path%></li>
+							</a>  
 							<li class="active text-center sideText"><%= link_to "Trips", trip_path%></li>
 							<li class="active text-center sideText"><%= link_to "New Trip", trip_new_path%></li>
 							<li class="active text-center sideText"><%= link_to "Inbox", messages_path%></li>
@@ -33,7 +36,6 @@
 								<% @receipts.each do |receipt| %>
 									<ul>
 									<li class="convoBox">
-									<%= receipt.message.inspect %>
 										<h4>Subject: <%= receipt.message.subject %></h4>
 										<div>Date: <%= receipt.message.created_at %></div>
 										<div>Body: <%= receipt.message.body %></div>
@@ -43,7 +45,6 @@
 						</div>	
 						<br>
 						<div class="row">
-						<h2>Reply</h2>
 								<%= form_tag("/conversations", method: "post") do %>
 								<%= hidden_field_tag 'id', @id %>
 								<%= hidden_field_tag 'msg_id', @msg_id%>
@@ -56,7 +57,7 @@
 								  <%= text_area_tag( :body, nil, size: "25x10", class: "textarea input") %>
 								</ul>
 								<p>
-									 <%= submit_tag("Save", class: "large default btn") %>
+									 <%= submit_tag("Reply", class: "large default btn") %>
 								</p>
 							 <% end %>
 								</ul>

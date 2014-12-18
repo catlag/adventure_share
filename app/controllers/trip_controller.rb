@@ -36,7 +36,7 @@ before_action :confirm_logged_in
     @trip = Trip.find_by_id(params[:id])
     @departure = @trip.departure.downcase.tr(" ", "_")
     @destination = @trip.destination.downcase.tr(" ", "_")
-    @url = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyAri8-XfDTUf1blrutB1Ebc4EbhVLaQMqY&origin=#{@departure}&destination=#{@destination}&avoid=tolls|highways"
+    @url = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyAri8-XfDTUf1blrutB1Ebc4EbhVLaQMqY&origin=#{@departure}&destination=#{@destination}&mode=driving"
   end
 
   def update

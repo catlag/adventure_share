@@ -47,12 +47,12 @@
 									<br>
 									End Date: <%= trip.endDate %>
 									<br>
-									Sats: <%= trip.seats %>
+									Seats: <%= trip.seats %>
 									<br>
-									<%= link_to("Update", :controller => :trip, :action => :edit, :id => trip.id) %>
-									<%= link_to 'Delete', 
-						      { :controller => 'trip', :action => 'destroy', :id => trip.id }, 
-						      { :confirm => 'Are you sure?', :method => :delete} %>
+									<%= link_to("Details" , {:controller => :trip, :action => :show, :id => trip.id}, class: "detail" ) %> l
+									<%= link_to("Update", {:controller => :trip, :action => :edit, :id => trip.id}, class: "detail") %> l									<%= link_to 'Delete', 
+						      { :controller => 'trip', :action => 'destroy', :id => trip.id, 
+						       :confirm => 'Are you sure?', :method => :delete}, class: "detail" %>
 				      	</li>
 							</ul>
 
