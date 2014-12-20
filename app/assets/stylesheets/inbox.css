@@ -89,7 +89,6 @@ form label{
 	margin-left: 10%;
 }
 
-
 .alert.secondary, .alert.danger, .alert.success{
 	color: white;
 	border: .13em solid white;
@@ -114,7 +113,6 @@ form label{
 
 li a { 
     display: block; 
-    /* and you can use padding for additional space if needs, as a clickable area / or other styling */ 
 }
 
 
