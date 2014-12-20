@@ -39,7 +39,6 @@ gem "mailboxer"
 
 gem 'rails_12factor', group: :production
 
-ruby "2.0.0"
 
 # Use unicorn as the app server
 # gem 'unicorn'
