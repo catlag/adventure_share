@@ -39,11 +39,14 @@ end
 def destroy
 	@user = User.find_by_id(session[:user_id])
 	@convo = @user.mailbox.conversations.find_by_id(params[:msg_id])
-	# @convo.messages.destroy_all     # destroy all conversation's messages
-  @convo.destory   
+	
+  @convo.mark_as_deleted(@user) 
 	# @user.mark_as_deleted @convo
-	# flash[:success] = "Trip deleted"
- #    redirect_to messages_path
+	if @convo.is_deleted?(@user)
+		flash[:success] = "Trip deleted"
+	    redirect_to messages_path
+	end
+
 
 end
 

@@ -31,13 +31,14 @@
 						<ul>
 							<li class="convoBox">
 							<h3><%= msg.subject %></h3>
+							<%= msg.inspect %>
 
 							<p>Date: <%= msg.created_at %></p>
 						
 						<%= link_to("View Conversation", :controller => :conversations, :action => :show, :id => msg.id) %>
 						<br>
 						<%= link_to 'Delete Conversation', 
-						      { :controller => 'conversations', :action => :destroy, :id => msg.id }, 
+						      { :controller => :conversations, :action => :destroy, :id => msg}, 
 						      { :confirm => 'Are you sure?', :method => :delete} %>
 						</ul>
 							</li>

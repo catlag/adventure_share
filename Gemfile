@@ -37,6 +37,8 @@ gem 'gulp_rails', '~> 1.0'
 
 gem "mailboxer"
 
+gem "figaro"
+
 gem 'rails_12factor', group: :production
 
 
