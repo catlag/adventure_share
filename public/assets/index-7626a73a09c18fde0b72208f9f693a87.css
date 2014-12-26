@@ -1,0 +1,83 @@
+body{
+	width: 100%;
+	height: 100%;
+	background-image: url(https://i.imgur.com/lc1RVly.jpg);
+		  background-attachment: fixed;
+    background-position: center;
+	-webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+.navbar {
+	height: 10em;
+	background-image: none;
+	background: none;
+	margin-top: 8.25em;
+	padding-top: .31em;
+	padding-bottom: .31em;
+
+}
+
+
+
+h1 a {
+	color: white;
+	background: rgba(0, 7, 7, 0.2);
+	border: 0.10em solid white;
+	border-color: white;
+	font-size: 1em;
+}
+
+a{
+	color: white;
+}
+
+
+.btn, .btn.default{
+	background: rgba(0, 7, 7, 0.2);
+	color: white;
+	text-shadow: 1px 1px rgba(0, 7, 7, 0.4);
+	border: 2px solid #f2f2f2;
+	padding-left: 0.25em !important;
+	padding-right: 0.25em !important;
+}
+
+a.btn:hover, a.btn.default:hover{
+  background: rgba(0, 7, 7, 0.4);
+}
+
+a:hover{
+	color: rgba(255, 255, 255, 0.6); 
+}
+
+
+.alert.secondary, .alert.danger, .alert.success{
+	color: white;
+	border: .13em solid white;
+	
+}
+
+.alert.secondary{
+	background: rgba(197, 198, 7, 0.4);
+}
+
+.alert.danger{
+	background: rgba(234, 4, 0, 0.4);
+}
+
+.alert.success{
+	background: rgba(38, 188, 44, 0.4);;
+}
+
+.alert{
+	padding: .38em .63em;
+	font-size: 1.5rem;
+}
+
+.navbar .logo a{
+	height: 200px !important;
+	line-height:80px !important;
+}
+ 
